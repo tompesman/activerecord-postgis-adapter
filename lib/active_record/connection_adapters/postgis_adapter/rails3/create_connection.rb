@@ -48,11 +48,11 @@ module ActiveRecord  # :nodoc:
         require 'active_record/connection_adapters/postgis_adapter/shared/jdbc_compat'
 
 
-        def postgis_connection(config_)
+        def postgresql_connection(config_)
           ::ActiveRecord::ConnectionAdapters::PostGISAdapter.create_jdbc_connection(self, config_)
         end
 
-        alias_method :jdbcpostgis_connection, :postgis_connection
+        alias_method :jdbcpostgresql_connection, :postgresql_connection
 
 
       else
@@ -67,7 +67,7 @@ module ActiveRecord  # :nodoc:
         # Based on the default <tt>postgresql_connection</tt> definition from
         # ActiveRecord.
 
-        def postgis_connection(config_)
+        def postgresql_connection(config_)
           config_ = config_.symbolize_keys
           host_ = config_[:host]
           port_ = config_[:port] || 5432

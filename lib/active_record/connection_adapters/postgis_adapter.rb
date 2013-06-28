@@ -47,7 +47,7 @@ module ActiveRecord
     module PostGISAdapter
 
       # The name returned by the adapter_name method of this adapter.
-      ADAPTER_NAME = 'PostGIS'.freeze
+      ADAPTER_NAME = 'PostgreSQL'.freeze
 
     end
 
